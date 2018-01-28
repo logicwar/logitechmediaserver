@@ -1,9 +1,7 @@
 #!/bin/sh
 
 #########################################
-
 ##        ENVIRONMENTAL CONFIG         ##
-
 #########################################
 
 #Apply the given parameters on first boot (PGID, PUID, TZ)
@@ -32,9 +30,7 @@ else
 fi
 
 #########################################
-
 ##          RUN THE SERVICES           ##
-
 #########################################
 
 #Launch the squeezebox server
