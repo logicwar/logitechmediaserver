@@ -1,9 +1,7 @@
 FROM phusion/baseimage:0.10.0
 
 #########################################
-
 ##             SET LABELS              ##
-
 #########################################
 
 # set version and maintainer label
@@ -14,9 +12,7 @@ LABEL maintainer="Logicwar <logicwar@gmail.com>"
 
 
 #########################################
-
 ##        ENVIRONMENTAL CONFIG         ##
-
 #########################################
 
 # Set correct environment variables
@@ -27,9 +23,7 @@ CMD ["/sbin/my_init"]
 
 
 #########################################
-
 ##          DOWNLOAD PACKAGES          ##
-
 #########################################
 
 # Download and install Dependencies
@@ -64,9 +58,7 @@ RUN \
 
 
 #########################################
-
 ##       COPY & RUN SETUP SCRIPT       ##
-
 #########################################
 # copy setup, default parameters and init files
 COPY root/ /
@@ -80,9 +72,7 @@ RUN \
 
 
 #########################################
-
 ##         EXPORTS AND VOLUMES         ##
-
 #########################################
 
 EXPOSE 3483 3483/udp 9000
