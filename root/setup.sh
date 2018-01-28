@@ -1,9 +1,7 @@
 #!/bin/sh
 
 #########################################
-
 ##        ENVIRONMENTAL CONFIG         ##
-
 #########################################
 
 # Disable unecessary services (SSH, Syslog and Cron)
@@ -11,9 +9,7 @@ rm -rf /etc/service/sshd /etc/service/cron /etc/service/syslog-ng /etc/my_init.d
 
 
 #########################################
-
 ##           CREATE FOLDERS            ##
-
 #########################################
 # Media folders
 mkdir \
@@ -34,9 +30,7 @@ touch /config/logs/server.log
 
 
 #########################################
-
 ##          SET PERMISSIONS            ##
-
 #########################################
 # create a "docker" user
 useradd -U docker
