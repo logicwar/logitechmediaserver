@@ -66,7 +66,7 @@ COPY root/ /
 # set permissions and run setup script
 RUN \
  chmod -R +x /etc/service/ && \
- chmod +x /setup.sh; sync; && \
+ chmod +x /setup.sh; sync && \
  /setup.sh && \
  rm /setup.sh
 
