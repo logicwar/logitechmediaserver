@@ -4,7 +4,7 @@
 [wiki]: http://wiki.slimdevices.com/index.php/Logitech_Media_Server
 [tz_wikipedia]:https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-# Docker Container for Logitech Media Server
+# [Docker Container for Logitech Media Server][hub]
 
 This is a Docker image based on phusion/baseimage for running the latest Logitech Media Server 7.9.1 build. [Nightly][appurl]
 
@@ -23,7 +23,7 @@ docker create --name=lms \
               -e PUID=<uid> \
               -e TZ=<timezone> \
               -p 9000:9000 \
-              -p 3483:3483
+              -p 3483:3483 \
               -p 3483:3483/udp \
               logicwar/logitechmediaserver
 ```
@@ -43,7 +43,7 @@ For shell access while the container is running do `docker exec -it lms /bin/bas
 
 ### User / Group ID
 
-For security reasons and to avoid permissions issues with data volumes (`-v` flags), you may want to create a specific "docker" user with proper right accesses on your audio folder. To find your user **uid** and **gid** you can use the `id <user>` command as below:
+For security reasons and to avoid permissions issues with data volumes (`-v` flags), you may want to create a specific "docker" user with proper right accesses on your persistant folders. To find your user **uid** and **gid** you can use the `id <user>` command as below:
 
 ```
   $ id <dockeruser>
