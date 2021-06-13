@@ -1,4 +1,4 @@
-[appurl]: http://downloads.slimdevices.com/nightly/index.php?ver=7.9
+[appurl]: https://downloads.slimdevices.com/LogitechMediaServer_v8.1.1/
 [hub]: https://hub.docker.com/r/logicwar/logitechmediaserver/
 [lms_wikipedia]: https://en.wikipedia.org/wiki/Logitech_Media_Server
 [wiki]: http://wiki.slimdevices.com/index.php/Logitech_Media_Server
@@ -6,7 +6,7 @@
 
 # [Docker Container for Logitech Media Server][hub]
 
-This is a Docker image based on phusion/baseimage for running the latest Logitech Media Server 7.9.2 build. [Nightly][appurl]
+This is a Docker image based on phusion/baseimage for running the latest Logitech Media Server [8.1.1 build][appurl].
 
 Logitech Media Server (formerly SlimServer, SqueezeCenter and Squeezebox Server) is a streaming audio server supported by Logitech (formerly Slim Devices), developed in particular to support their Squeezebox range of digital audio receivers. [Wikipedia][lms_wikipedia] / [Official Squeezebox site][wiki]
 
@@ -65,6 +65,7 @@ Click on the upgrade link which will take you to the LMS updates page. Alternati
 To follow the instruction of the information page, you will need to open a terminal session on your running docker container: `docker exec -it lms /bin/bash`. When all steps have been followed you will need to stop and restart the container.
 
 ## Versions
++ **V0.4** Updated with 8.1.1 - 1610364019 and phusion/baseimage focal-1.0.0
 + **V0.3** Updated with 7.9.2-1545144292
 + **V0.2** Updated with 7.9.1-1517314665
 + **V0.1** Initial Release 7.9.1-1516947667
