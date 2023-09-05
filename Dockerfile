@@ -1,4 +1,4 @@
-FROM phusion/baseimage:focal-1.0.0
+FROM phusion/baseimage:focal-1.2.0
 
 #########################################
 ##             SET LABELS              ##
@@ -32,6 +32,9 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	libio-socket-ssl-perl \
+	libcrypt-openssl-bignum-perl \
+	libcrypt-openssl-random-perl \
+	libcrypt-openssl-rsa-perl \
 	lame faad flac sox \
 	wget && \
  rm -rf \
@@ -44,7 +47,7 @@ RUN \
  echo "**** Install latest Logitech Media Server package ****" && \
  os=$(dpkg --print-architecture) && \
  if [ "$os" = "armhf" ]; then os=arm; fi &&\
- url="http://www.mysqueezebox.com/update/?version=8.1.1&revision=1&geturl=1&os=deb$os" && \
+ url="http://www.mysqueezebox.com/update/?version=8.3.1&revision=1&geturl=1&os=deb$os" && \
  latest_lms=$(wget -q -O - "$url") && \
  mkdir -p /sources && \
  cd /sources && \
